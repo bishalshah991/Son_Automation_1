@@ -80,8 +80,11 @@ public class TestBase {
         switch (browser.toLowerCase(Locale.ROOT))
         {
             case "chrome":
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                ChromeOptions ops = new ChromeOptions();
+                ops.addArguments("--remote-allow-origins=*");
+                ops.addArguments("--no-sandbox");
+                ops.addArguments("--disable-dev-shm-usage");
+                driver = new ChromeDriver(ops);
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
