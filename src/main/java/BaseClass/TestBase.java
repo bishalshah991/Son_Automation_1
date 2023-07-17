@@ -82,7 +82,7 @@ public class TestBase {
             case "chrome":
                 ChromeOptions ops = new ChromeOptions();
                 //ops.addArguments("--remote-allow-origins=*");
-                //ops.addArguments("--no-sandbox");
+                ops.addArguments("--no-sandbox");
                 ops.addArguments("--disable-dev-shm-usage");
                 ops.addArguments("--ignore-ssl-errors=yes");
                 ops.addArguments("--ignore-certificate-errors'");
