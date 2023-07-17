@@ -80,9 +80,10 @@ public class TestBase {
         switch (browser.toLowerCase(Locale.ROOT))
         {
             case "chrome":
-                ChromeOptions ops = new ChromeOptions();
-                //ops.addArguments("--remote-allow-origins=*");
+                ChromeOptions ops =new ChromeOptions();
+                ops.addArguments("--remote-allow-origins=*");
                 ops.addArguments("--no-sandbox");
+                driver = new ChromeDriver(ops);
                 ops.addArguments("start-maximized");
                 ops.setExperimentalOption("detach", "true");
                 ops.addArguments("--disable-dev-shm-usage");
@@ -90,7 +91,6 @@ public class TestBase {
                 ops.addArguments("--ignore-certificate-errors'");
                 ops.addArguments("--disable-dev-shm-usage");
                 ops.addArguments("-disable-gpu");
-                driver = new ChromeDriver(ops);
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -99,8 +99,6 @@ public class TestBase {
             case "safari":
                 driver=new SafariDriver();
                 break;
-
-
             default:
                 driver=null;
                 break;
