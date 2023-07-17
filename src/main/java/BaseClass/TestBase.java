@@ -28,7 +28,7 @@ import java.util.Locale;
 public class TestBase {
 
     private String Version;
-    public static WebDriver driver;
+    public static WebDriver driver=null;
     public static ExtentReports extentReports;
     public static ExtentTest extentTest;
     protected String path=System.getProperty("user.dir")+"\\ExtentReportGenerate\\index.html";
