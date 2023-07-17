@@ -83,11 +83,13 @@ public class TestBase {
                 ChromeOptions ops = new ChromeOptions();
                 //ops.addArguments("--remote-allow-origins=*");
                 ops.addArguments("--no-sandbox");
+                ops.addArguments("start-maximized");
+                ops.setExperimentalOption("detach", "true");
                 ops.addArguments("--disable-dev-shm-usage");
                 ops.addArguments("--ignore-ssl-errors=yes");
                 ops.addArguments("--ignore-certificate-errors'");
                 ops.addArguments("--disable-dev-shm-usage");
-                //ops.addArguments("-disable-gpu");
+                ops.addArguments("-disable-gpu");
                 driver = new ChromeDriver(ops);
                 break;
             case "firefox":

@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
     <test name="SON Test on Chrome">
-        <parameter name="browserName" value="Chrome"/>
+        <parameter name="browserName" value="chromium-browser"/>
         <parameter name="Url" value="https://snuat.benekiva.io/login/"></parameter>
         <parameter name="author" value="Bishal"></parameter>
         <classes>
