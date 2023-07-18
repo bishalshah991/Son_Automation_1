@@ -81,7 +81,7 @@ public class TestBase {
         switch (browser.toLowerCase(Locale.ROOT))
         {
             case "chrome":
-                System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+                System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome-stable");
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
                 options.addArguments("start-maximized"); // open Browser in maximized mode
@@ -90,7 +90,7 @@ public class TestBase {
                 options.addArguments("--disable-gpu"); // applicable to windows os only
                 options.addArguments("--no-sandbox"); // Bypass OS security model
                 driver = new ChromeDriver(options);
-                driver.get("https://google.com");
+                driver.get("https://snuat.benekiva.io/login/");
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
