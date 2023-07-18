@@ -80,6 +80,7 @@ public class TestBase {
         switch (browser.toLowerCase(Locale.ROOT))
         {
             case "chrome":
+                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
                 ChromeOptions ops =new ChromeOptions();
                 ops.addArguments("--disable-extensions");
                 ops.addArguments("--disable-gpu");
@@ -87,7 +88,7 @@ public class TestBase {
                 ops.addArguments("--disable-dev-shm-usage");
                 ops.addArguments("start-maximized");
                 ops.addArguments("disable-infobars");
-                driver = new ChromeDriver(ops);
+                driver=new ChromeDriver(ops);
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
