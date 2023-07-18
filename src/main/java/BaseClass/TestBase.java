@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestContext;
@@ -80,12 +81,8 @@ public class TestBase {
         switch (browser.toLowerCase(Locale.ROOT))
         {
             case "chrome":
-                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-                ChromeOptions ops =new ChromeOptions();
-                ops.addArguments("--headless");
-                ops.addArguments("--no-sandbox");
-                ops.addArguments("start-maximized");
-                driver=new ChromeDriver(ops);
+                WebDriverManager.chromedriver().setup();
+                driver=new ChromeDriver();
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -98,7 +95,7 @@ public class TestBase {
                 driver=null;
                 break;
         }
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         driver.get(Url);
     }
 
