@@ -82,15 +82,10 @@ public class TestBase {
         {
             case "chrome":
                 System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-                options.addArguments("start-maximized"); // open Browser in maximized mode
-                options.addArguments("disable-infobars"); // disabling infobars
-                options.addArguments("--disable-extensions"); // disabling extensions
-                options.addArguments("--disable-gpu"); // applicable to windows os only
-                options.addArguments("--no-sandbox"); // Bypass OS security model
-                driver = new ChromeDriver(options);
-                driver.get("https://snuat.benekiva.io/login/");
+                ChromeOptions options=new ChromeOptions();
+                options.addArguments("--headless");
+                options.addArguments("--no-sandbox");
+                driver=new ChromeDriver(options);
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -103,7 +98,7 @@ public class TestBase {
                 driver=null;
                 break;
         }
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.get(Url);
     }
 
