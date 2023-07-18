@@ -81,16 +81,12 @@ public class TestBase {
         {
             case "chrome":
                 ChromeOptions ops =new ChromeOptions();
-                ops.addArguments("--remote-allow-origins=*");
+                ops.addArguments("--disable-dev-shm-usage");
+                ops.addArguments("start-maximized");
+                ops.addArguments("disable-infobars");
+                ops.addArguments("--disable-extensions");
                 ops.addArguments("--no-sandbox");
                 driver = new ChromeDriver(ops);
-                ops.addArguments("start-maximized");
-                ops.setExperimentalOption("detach", "true");
-                ops.addArguments("--disable-dev-shm-usage");
-                ops.addArguments("--ignore-ssl-errors=yes");
-                ops.addArguments("--ignore-certificate-errors'");
-                ops.addArguments("--disable-dev-shm-usage");
-                ops.addArguments("-disable-gpu");
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -103,7 +99,7 @@ public class TestBase {
                 driver=null;
                 break;
         }
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.get(Url);
     }
 
