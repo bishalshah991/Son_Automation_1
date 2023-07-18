@@ -81,11 +81,12 @@ public class TestBase {
         {
             case "chrome":
                 ChromeOptions ops =new ChromeOptions();
+                ops.addArguments("--disable-extensions");
+                ops.addArguments("--disable-gpu");
+                ops.addArguments("--no-sandbox");
                 ops.addArguments("--disable-dev-shm-usage");
                 ops.addArguments("start-maximized");
                 ops.addArguments("disable-infobars");
-                ops.addArguments("--disable-extensions");
-                ops.addArguments("--no-sandbox");
                 driver = new ChromeDriver(ops);
                 break;
             case "firefox":
