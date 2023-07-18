@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">UAT Automation Result</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jul 19, 2023 02:39:50 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jul 19, 2023 02:40:32 AM</span></a>
 </li>
 </ul>
 </div>
@@ -108,7 +108,7 @@
           <div class="test-detail">
             <p class="name">SON Test on Chrome</p>
             <p class="text-sm">
-              <span>2:39:56 AM</span> / <span>00:00:04:453</span>
+              <span>2:40:38 AM</span> / <span>00:00:16:737</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -117,9 +117,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">SON Test on Chrome</h5>
-<span class='badge badge-success'>07.19.2023 2:39:56 AM</span>
-<span class='badge badge-danger'>07.19.2023 2:40:00 AM</span>
-<span class='badge badge-default'>00:00:04:453</span>
+<span class='badge badge-success'>07.19.2023 2:40:38 AM</span>
+<span class='badge badge-danger'>07.19.2023 2:40:55 AM</span>
+<span class='badge badge-default'>00:00:16:737</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -137,17 +137,18 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>2:40:00 AM</td>
+        <td>2:40:55 AM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable
+          <textarea readonly class="code-block">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
   (Session info: chrome=114.0.5735.199)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e3aecff4eaf47613f8ae94c80f554a4e, clickElement {id=51E4175DEAAC397D211E0954617B88B4_element_27}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\bisha\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61941}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61941/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (e3aecff4eaf47613f8ae94c80f554a4e)] -> xpath: //span[contains(text(),'Policy Search')]]
-Session ID: e3aecff4eaf47613f8ae94c80f554a4e
+Command: [63811837f02f749694b10e171d2d37a4, clickElement {id=D52CCCB6C80804E911A4443ACC7057C1_element_72}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\bisha\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61983}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61983/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (63811837f02f749694b10e171d2d37a4)] -> xpath: //span[contains(text(),'[None Selected]')]]
+Session ID: 63811837f02f749694b10e171d2d37a4
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -164,8 +165,9 @@ Session ID: e3aecff4eaf47613f8ae94c80f554a4e
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
-	at Helper.Son_Helper.PolicySearch.PolicySearchTab(PolicySearch.java:45)
-	at TestCase.End_End_Step.Son_Flow_End_to_End(End_End_Step.java:28)
+	at Utility.DropDown.Handling_Drop_Down(DropDown.java:27)
+	at Helper.Son_Helper.Claim_Intake.EnterPlainCategory(Claim_Intake.java:56)
+	at TestCase.End_End_Step.Son_Flow_End_to_End(End_End_Step.java:37)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -222,12 +224,12 @@ Session ID: e3aecff4eaf47613f8ae94c80f554a4e
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.ElementNotInteractableException</p>
+<p class="name">org.openqa.selenium.StaleElementReferenceException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.ElementNotInteractableException</h4>
+<h4>org.openqa.selenium.StaleElementReferenceException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -241,7 +243,7 @@ Session ID: e3aecff4eaf47613f8ae94c80f554a4e
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>02:39:56 AM</td>
+<td>02:40:38 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>SON Test on Chrome</a>
 </td>
@@ -290,7 +292,7 @@ Session ID: e3aecff4eaf47613f8ae94c80f554a4e
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>02:39:56 AM</td>
+<td>02:40:38 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>SON Test on Chrome</a>
 </td>
@@ -339,7 +341,7 @@ Session ID: e3aecff4eaf47613f8ae94c80f554a4e
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>02:39:56 AM</td>
+<td>02:40:38 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>SON Test on Chrome</a>
 </td>
@@ -361,13 +363,13 @@ Session ID: e3aecff4eaf47613f8ae94c80f554a4e
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jul 19, 2023 02:39:50 AM</h3>
+<h3>Jul 19, 2023 02:40:32 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jul 19, 2023 02:40:00 AM</h3>
+<h3>Jul 19, 2023 02:40:55 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -437,7 +439,7 @@ Session ID: e3aecff4eaf47613f8ae94c80f554a4e
 </div></div>
 <script>
 var timeline = {
-"SON Test on Chrome":4.453
+"SON Test on Chrome":16.737
 };
 </script>
 <div class="row">
