@@ -81,7 +81,7 @@ public class TestBase {
         switch (browser.toLowerCase(Locale.ROOT))
         {
             case "chrome":
-                System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome-stable");
+                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
                 options.addArguments("start-maximized"); // open Browser in maximized mode
