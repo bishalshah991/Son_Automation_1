@@ -81,11 +81,13 @@ public class TestBase {
         switch (browser.toLowerCase(Locale.ROOT))
         {
             case "chrome":
-                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-                ChromeOptions options=new ChromeOptions();
-                options.addArguments("--headless");
-                options.addArguments("--no-sandbox");
-                driver=new ChromeDriver(options);
+                WebDriverManager.chromedriver().setup();
+                driver=new ChromeDriver();
+//                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//                ChromeOptions options=new ChromeOptions();
+//                options.addArguments("--headless");
+//                options.addArguments("--no-sandbox");
+//                driver=new ChromeDriver(options);
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -98,7 +100,7 @@ public class TestBase {
                 driver=null;
                 break;
         }
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         driver.get(Url);
     }
 
